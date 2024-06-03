@@ -3,13 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Rental Car Ben Aissa </title>
+    <title>Test</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1> Welcome to the Premium Rental Car App!</h1>
-    
+    <header>
+        <div class="container">
+            <h1>Ben Aissa's Autoverleih</h1>
+            <p>Jedes Auto wird pauschal für einen Tag verliehen</p>
+        </div>
+    </header>
+    <main>
+        <section id="form">
+            <h2>Formular</h2>
+            <form id="rentalForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Wunschtermin:</label>
+                    <input type="date" class="form-control" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="fahrzeugmodell">Fahrzeugmodell:</label>
+                    <select class="form-control" id="car_name" name="fahrzeugmodell">
+                        <option value="-">-</option>
+                        <option value="Golf 4">Golf 4</option>
+                        <option value="Golf 5">Golf 5</option>
+                        <option value="Golf 6">Golf 6</option>
+                    </select>
+                </div>
+                <button type="button" onclick="sendCarName()">Klick mich</button>
+            </form>
+        </section>
+        <br>
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p>Email: info@lotfisautoverleih.de</p>
+        </section>
+    </main>
+    <footer>
+        <p>Lotfi - Alle Rechte vorbehalten</p>
+    </footer>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-    
 </body>
 </html>

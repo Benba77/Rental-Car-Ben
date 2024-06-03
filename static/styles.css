@@ -1,0 +1,60 @@
+/* Grundlegende Stilisierungen für die gesamte Seite */
+body {
+    font-family: Arial, sans-serif; /* Setzt die Schriftart für die gesamte Seite */
+    margin: 0;
+    padding: 0;
+    background-color: #86ced8; /* Leichter Hintergrund für die gesamte Seite */
+    color: #333; /* Grundfarbe für Text */
+}
+
+header {
+    background-color: #000000; /* Dunkelblauer Hintergrund für den Kopfbereich */
+    color: white; /* Weißer Text im Kopfbereich */
+    padding: 10px 20px; /* Innenabstand */
+}
+
+header h1 {
+    margin: 0; /* Entfernt den Standardabstand um die Überschrift */
+}
+
+nav ul {
+    list-style-type: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0; /* Entfernt den Innenabstand */
+}
+
+nav ul li {
+    display: inline; /* Zeigt die Listenelemente in einer Zeile an */
+    margin-right: 10px; /* Fügt rechts von jedem Listenelement einen Abstand hinzu */
+}
+
+nav ul li a {
+    color: white; /* Weißer Text für Links */
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+}
+
+main {
+    padding: 20px; /* Innenabstand für den Hauptinhalt */
+}
+
+section {
+    margin-bottom: 20px; /* Abstand unten für jede Sektion */
+    background-color: white; /* Weißer Hintergrund für Abschnitte */
+    padding: 20px; /* Innenabstand für Abschnitte */
+    border-radius: 8px; /* Abgerundete Ecken */
+}
+
+footer {
+    background-color: #333; /* Dunkelgrauer Hintergrund für den Fußbereich */
+    color: white; /* Weißer Text im Fußbereich */
+    text-align: center; /* Zentriert den Text im Fußbereich */
+    padding: 10px 20px; /* Innenabstand */
+    position: fixed;
+    bottom: 0;
+    width: 100%; /* Breite des Fußbereichs */
+}
+
+/*
+•	Schriftarten und Farben: Diese können leicht geändert werden, um das Design deiner Marke oder deines persönlichen Stils widerzuspiele.
+•	Layout: Das Layout ist recht einfach gehalten, mit Abschnitten, die jeweils klar definiert sind.
+•	Responsive Design: Für die Anpassung an verschiedene Bildschirmgrößen könnten zusätzliche Media Queries eingefügt werden.
+*/
