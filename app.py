@@ -6,8 +6,10 @@ from data import *
 
 app = Flask(__name__)
 
+# Basisklasse für die Datenbanktabellen
 Base = declarative_base()
 
+# Definition der Rental-Tabelle
 class Rental(Base):
     __tablename__ = 'rentals'
     id = Column(Integer, primary_key=True)
@@ -16,7 +18,7 @@ class Rental(Base):
     date = Column(Date, nullable=False)
     car_name = Column(String(80), nullable=False)
 
-# Create an engine and a session
+# Initialisierung der Datenbank
 engine = create_engine('sqlite:///rentals.db')
 Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
