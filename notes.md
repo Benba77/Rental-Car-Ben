@@ -11,6 +11,10 @@ einer Datenbank hinterlegt werden.( z.B.)
     * (Landkarte)
     * (Email)
 
-Ordnerstruktur:
-* templates
+Tipps:
+* https://bitbucket.org/qualidy/python_f73/src/main/Python02/KW23_Jun03-07_Projektwoche_Autobuchung/README.md
+
+ToDo:
+* Github berechtigung für pushen
+* HTML eingabe + Datenbank
 
