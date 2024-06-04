@@ -1,4 +1,3 @@
-/* Grundlegende Stilisierungen für die gesamte Seite */
 body {
     font-family: Arial, sans-serif; /* Setzt die Schriftart für die gesamte Seite */
     margin: 0;
@@ -53,8 +52,3 @@ footer {
     width: 100%; /* Breite des Fußbereichs */
 }
 
-/*
-•	Schriftarten und Farben: Diese können leicht geändert werden, um das Design deiner Marke oder deines persönlichen Stils widerzuspiele.
-•	Layout: Das Layout ist recht einfach gehalten, mit Abschnitten, die jeweils klar definiert sind.
-•	Responsive Design: Für die Anpassung an verschiedene Bildschirmgrößen könnten zusätzliche Media Queries eingefügt werden.
-*/
