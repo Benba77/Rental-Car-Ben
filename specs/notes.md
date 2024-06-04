@@ -25,7 +25,4 @@ Tipps:
     * Testbutton zum Anzeigen von allen Benutzern & deren Modelle & Buchungen
 * Drop Down Menü Automodelle: Verbunden mit Datenbank (Nur freiwählbare Autos werden angezeigt, je nachdem welcher Tag gewählt)
 
-
-
-
-Test: branch_bedia
+Test ob es bleibt
