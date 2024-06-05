@@ -16,13 +16,19 @@ Tipps:
 * https://bitbucket.org/qualidy/python_f73/src/main/Python02/KW23_Jun03-07_Projektwoche_Autobuchung/README.md
 
 # To-Do Liste
-* Sql Alchemy checken
-    * 2xDatenbank: 
-        * 1 für Namen, Email, Wunschtermin, Fahrzeugmodell(ForeignKey)
-        * 1 für Automodell, frei/besetzt, Wunschtermin(ForeignKey) (optional: Preis)
-    * Test-Aufruf von AutoModell Datenbank -> Anzeigen auf HTML Seite mithilfe von Flask
-* HTML Formular eingeben -> Speichern in Datenbank 
-    * Testbutton zum Anzeigen von allen Benutzern & deren Modelle & Buchungen
-* Drop Down Menü Automodelle: Verbunden mit Datenbank (Nur freiwählbare Autos werden angezeigt, je nachdem welcher Tag gewählt)
+1) 2xDatenbank bauen: 
+    * 1 für Namen, Email, Wunschtermin, Fahrzeugmodell(ForeignKey)
+    * 1 für Autonamen, frei/besetzt, Wunschtermin(ForeignKey?) (optional: Preis)
+        (* Test-Aufruf von AutoModell Datenbank -> Anzeigen auf HTML Seite mithilfe von Flask render)
 
-Test ob es bleibt
+2) Drop Down Menü Automodelle: Verbunden mit Datenbank 
+    2.1) Nur freiwählbare Autos werden angezeigt, je nachdem welcher Tag gewählt
+
+3) Bei Buchung im Kalender freies Datum/gebuchte Termine anzeigen 
+
+4) Administrationsseite, in der die Buchungen bzw. Verfügbarkeiten der Fahrzeuge
+eingesehen werden können.
+
+5) Fertig!
+
+Git Branch Bedia
