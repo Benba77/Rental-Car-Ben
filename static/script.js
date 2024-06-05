@@ -1,26 +1,35 @@
-async function sendCarName() {
-    // Holt das Formular-Element
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('rentalForm');
-    
-    // Holt alle Daten aus dem Formular
-    const formData = new FormData(form);
-    
-    // Wandelt die Formulardaten in ein JSON-Objekt um
-    const data = Object.fromEntries(formData.entries());
 
-    // Senden der Daten an den Server
-    const response = await fetch('/submit-form', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data) // Konvertiert das Daten-Objekt in einen JSON-String
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const formData = new FormData(form);
+
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            date: formData.get('date'),
+            car_name: formData.get('car_name')
+        };
+
+        try {
+            const response = await fetch('/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            alert(result.message);
+        } catch (error) {
+            console.error('Error:', error);
+        }
     });
+});
 
-    // Überprüft, ob die Anfrage erfolgreich war
-    if (response.ok) {
-        alert('Form submitted successfully!'); // Erfolgreiche Rückmeldung
-    } else {
-        alert('Error submitting form.'); // Fehler-Rückmeldung
-    }
+function sendCarName() {
+    const carName = document.getElementById('car_name').value;
+    alert(`Selected car model: ${carName}`);
 }

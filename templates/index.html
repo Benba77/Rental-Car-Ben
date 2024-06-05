@@ -23,13 +23,14 @@
             <label for="date">Wunschtermin:</label>
             <input type="date" class="form-control" id="date" name="date" required>
             <br>
-            <label for="fahrzeugmodell">Fahrzeugmodell:</label>
-            <select class="form-control" id="car_name" name="fahrzeugmodell">
+            <label for="car_name">Fahrzeugmodell:</label>
+            <select class="form-control" id="car_name" name="car_name">
                 <option value="-">-</option>
                 <option value="Golf 4">Golf 4</option>
                 <option value="Golf 5">Golf 5</option>
             </select>
             <br>
+            <button type="submit">Absenden</button>
             <button type="button" onclick="sendCarName()">Klick mich</button>
         </form>
         <br>
@@ -39,7 +40,6 @@
         </section>
         <a href="{{ url_for('admin') }}"> Admin-Site </a>
     </main>
-
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>

@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String, Date
 from sqlalchemy.orm import declarative_base, sessionmaker
+from datetime import datetime
 
 # Basisklasse für die Datenbanktabellen
 Base = declarative_base()
@@ -37,6 +38,18 @@ def get_Rentals():
     tabelle= '\n<br>'.join(map(str,result))
     return tabelle
     
+def get_submit_form(data):
+    Session = sessionmaker(bind=engine)
+    with Session() as session:
+        new_rental = Rental(
+            name=data['name'],
+            email=data['email'],
+            date=datetime.strptime(data['date'], '%Y-%m-%d'),
+            car_name=data['car_name']
+        )
+        session.add(new_rental)
+        session.commit()
+    return {'message': 'Form submitted successfully!'}
 
 if __name__== '__main__':
     pass

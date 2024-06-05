@@ -15,7 +15,9 @@
         <a href="{{ url_for('index') }}">Zurück zur Website</a>
         <br>
         <br>
-        '{{ all_rentals }}'
+        <div>
+            {{ all_rentals|safe }}
+        </div>
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
