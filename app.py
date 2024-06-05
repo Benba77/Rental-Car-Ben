@@ -2,13 +2,18 @@ from flask import Flask, request, jsonify, render_template
 from sqlalchemy import create_engine, Column, Integer, String, Date
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
-from data import *
+import data
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/admin')
+def admin():
+    all_rental_data= data.get_Rentals()
+    return render_template('admin.html', all_rentals=all_rental_data)
 
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
@@ -24,10 +29,6 @@ def submit_form():
         session.commit()
     return jsonify({'message': 'Form submitted successfully!'})
 
-@app.route('/rental-data')
-def get_rental_app():
-    all_rental_data= data.get_Rentals()
-    return render_template('admin.html', all_rentals=all_rental_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
