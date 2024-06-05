@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify, render_template
-from data import get_Rentals, get_submit_form, get_cars
+from data import get_Rentals, get_submit_form, get_cars, init_cars
+
+init_cars()
 
 app = Flask(__name__)
 
