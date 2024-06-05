@@ -4,6 +4,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker
 # Basisklasse für die Datenbanktabellen
 Base = declarative_base()
 
+
 # Definition der Rental-Tabelle
 class Rental(Base):
     __tablename__ = 'rentals'
@@ -13,10 +14,6 @@ class Rental(Base):
     date = Column(Date, nullable=False)
     car_name = Column(String(80), nullable=False)
 
-# Initialisierung der Datenbank
-def init_db():
-    engine = create_engine('sqlite:///rentals.db')
-    Base.metadata.create_all(engine)
-    return sessionmaker(bind=engine)
+engine = create_engine('sqlite:///rentals.db')
+Base.metadata.create_all(engine)
 
-Session = init_db()

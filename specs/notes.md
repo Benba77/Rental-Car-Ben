@@ -16,6 +16,8 @@ Tipps:
 * https://bitbucket.org/qualidy/python_f73/src/main/Python02/KW23_Jun03-07_Projektwoche_Autobuchung/README.md
 
 # To-Do Liste
+* Mitwoch: Ziel fertig werden
+
 1) 2xDatenbank bauen: 
     * 1 für Namen, Email, Wunschtermin, Fahrzeugmodell(ForeignKey)
     * 1 für Autonamen, frei/besetzt, Wunschtermin(ForeignKey?) (optional: Preis)
@@ -31,3 +33,6 @@ eingesehen werden können.
 
 5) Fertig!
 
+* Donnerstag: Alles verstehen
+
+* Freitag: Kleine Veränderungen(Hauptdatei unberührt) -> Präsentieren
