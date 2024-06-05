@@ -16,18 +16,8 @@ header h1 {
     margin: 0; /* Entfernt den Standardabstand um die Überschrift */
 }
 
-nav ul {
-    list-style-type: none; /* Entfernt die Aufzählungszeichen */
-    padding: 0; /* Entfernt den Innenabstand */
-}
 
-nav ul li {
-    display: inline; /* Zeigt die Listenelemente in einer Zeile an */
-    margin-right: 10px; /* Fügt rechts von jedem Listenelement einen Abstand hinzu */
-}
-
-nav ul li a {
-    color: white; /* Weißer Text für Links */
+nav ul li a {   
     text-decoration: none; /* Entfernt die Unterstreichung der Links */
 }
 
