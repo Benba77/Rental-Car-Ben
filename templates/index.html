@@ -26,12 +26,12 @@
             <label for="car_name">Fahrzeugmodell:</label>
             <select class="form-control" id="car_name" name="car_name">
                 <option value="-">-</option>
-                <option value="Golf 4">Golf 4</option>
-                <option value="Golf 5">Golf 5</option>
+                {% for car in cars %}
+                <option value="{{ car.autoname }}">{{ car.autoname }} - {{ car.price_per_day }} €/Tag</option>
+                {% endfor %}
             </select>
             <br>
             <button type="submit">Absenden</button>
-            <button type="button" onclick="sendCarName()">Klick mich</button>
         </form>
         <br>
         <section id="contact">

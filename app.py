@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify, render_template
-from data import get_Rentals, get_submit_form
+from data import get_Rentals, get_submit_form, get_cars
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    cars = get_cars()
+    return render_template('index.html', cars=cars)
 
 @app.route('/admin')
 def admin():
