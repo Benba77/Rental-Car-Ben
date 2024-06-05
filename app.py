@@ -24,6 +24,11 @@ def submit_form():
         session.commit()
     return jsonify({'message': 'Form submitted successfully!'})
 
+@app.route('/rental-data')
+def get_rental_app():
+    all_rental_data= data.get_Rentals()
+    return render_template('admin.html', all_rentals=all_rental_data)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
