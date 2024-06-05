@@ -1,10 +1,23 @@
-<h1>
-    Database Cars, Rental & Customers
-</h1>
- 
-<p>Hier kommt die Datenbank</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Database Cars, Rental & Customers</h1>
+    </header>
+    <main>
+        <p>Hier kommt die Datenbank</p>
+        <a href="{{ url_for('index') }}">Zurück zur Website</a>
+        <br>
+        <br>
+        '{{ all_rentals }}'
+    </main>
 
-<a href="index.html"> Zurück zur Website </a>
-<br>
-<br>
-'{{ all_rentals }}'
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
