@@ -66,14 +66,18 @@ In der index.html-Datei fügst du ein div-Element für die Karte hinzu und passt
 In der script.js-Datei fügst du die Logik für die Kartendarstellung hinzu:
 
 Standorte:
-* Wolfsburg
-    * Lat: 52.4227° N
-    * Lon: 10.7865° E
+<h2> Unser Standort auf der Streetmap! </h2>
+        <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.51087686252092%2C52.24981701179856%2C10.53087686252092%2C52.26981701179856&amp;layer=mapnik&amp;marker=52.25981701179856%2C10.52087686252092"
+            style="border: 1px solid black"></iframe>
+        <br>
+        <small><a href="https://www.openstreetmap.org/?mlat=52.25981701179856&mlon=10.52087686252092#map=16/52.2598/10.5209">Größere Karte anzeigen</a></small>
 
-* Braunschweig
-    * Lat: 52° 15' 57.38" N
-    * Lon: 10° 31' 36.23" E
+Explanation:
+marker parameter: This part of the iframe URL marker=52.25981701179856%2C10.52087686252092 sets the marker's position. The coordinates 52.25981701179856 (latitude) and 10.52087686252092 (longitude) place the marker at the specific location.
+The marker is set to the new coordinates 52.2600, 10.5300
+The %2C in the URL represents a comma (,).
 
-* Salzgitter:
-    * Lat: 52.4227° N
-    * Lon: 10.7865° E
+Bounding Box (bbox): The bbox parameter defines the map's view boundaries. It should be set to a suitable range to ensure the location is centered and visible. In this case, it's slightly adjusted around the marker coordinates.
+
+

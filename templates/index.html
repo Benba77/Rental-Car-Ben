@@ -38,9 +38,18 @@
             <h2>Kontakt</h2>
             <p>Email: info@lotfisautoverleih.de</p>
         </section>
-        <a href="{{ url_for('admin') }}"> Admin-Site </a>
+        <a href="{{ url_for('admin') }}"> Admin-Site </a> <br> 
+
+        <h2> Unser Standort auf der Streetmap! </h2>
+        <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.51087686252092%2C52.24981701179856%2C10.53087686252092%2C52.26981701179856&amp;layer=mapnik&amp;marker=52.25981701179856%2C10.52087686252092"
+            style="border: 1px solid black"></iframe>
+        <br>
+        <small><a href="https://www.openstreetmap.org/?mlat=52.25981701179856&mlon=10.52087686252092#map=16/52.2598/10.5209">Größere Karte anzeigen</a></small>
+    </main>
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
+
