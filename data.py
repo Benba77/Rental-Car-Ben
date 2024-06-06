@@ -48,17 +48,15 @@ def get_session():
 # Initialisierung mit 5 Autos
 def init_cars():
     session = get_session()
-    existing_cars = session.query(Car).count()
-    if existing_cars == 0:
-        cars = [
-            Car(autoname='Golf 4', available=True, wish_date=None, price_per_day=50),
-            Car(autoname='Golf 5', available=True, wish_date=None, price_per_day=60),
-            Car(autoname='BMW 3', available=True, wish_date=None, price_per_day=80),
-            Car(autoname='Audi A4', available=True, wish_date=None, price_per_day=70),
-            Car(autoname='Mercedes C', available=True, wish_date=None, price_per_day=90),
-        ]
-        session.add_all(cars)
-        session.commit()
+    cars = [
+        Car(autoname='Golf 4', available=True, wish_date=None, price_per_day=50),
+        Car(autoname='Golf 5', available=True, wish_date=None, price_per_day=60),
+        Car(autoname='BMW 3', available=True, wish_date=None, price_per_day=80),
+        Car(autoname='Audi A4', available=True, wish_date=None, price_per_day=70),
+        Car(autoname='Mercedes C', available=True, wish_date=None, price_per_day=90),
+    ]
+    session.add_all(cars)
+    session.commit()
     session.close()
 
 def get_Rentals():
