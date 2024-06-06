@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, render_template
-from data import get_Rentals, get_submit_form, get_cars
+from data import get_Rentals, get_submit_form, get_cars, get_available_cars
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -12,6 +13,13 @@ def index():
 def admin():
     all_rental_data = get_Rentals()
     return render_template('admin.html', all_rentals=all_rental_data)
+
+@app.route('/api/available-cars')
+def available_cars():
+    start_date = request.args.get('start_date')
+    end_date = request.args.get('end_date')
+    available_cars = get_available_cars(start_date, end_date)
+    return jsonify([car.autoname for car in available_cars])
 
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
