@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
             email: formData.get('email'),
             date: formData.get('date'),
             car_name: formData.get('car_name')
-        };
+        }; 
 
+        
         try {
             const response = await fetch('/submit-form', {
                 method: 'POST',

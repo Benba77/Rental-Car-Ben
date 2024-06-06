@@ -64,3 +64,16 @@ Schritt 2: Anpassung der HTML- und JavaScript-Dateien
 In der index.html-Datei fügst du ein div-Element für die Karte hinzu und passt das Dropdown-Menü an:
 
 In der script.js-Datei fügst du die Logik für die Kartendarstellung hinzu:
+
+Standorte:
+* Wolfsburg
+    * Lat: 52.4227° N
+    * Lon: 10.7865° E
+
+* Braunschweig
+    * Lat: 52° 15' 57.38" N
+    * Lon: 10° 31' 36.23" E
+
+* Salzgitter:
+    * Lat: 52.4227° N
+    * Lon: 10.7865° E
