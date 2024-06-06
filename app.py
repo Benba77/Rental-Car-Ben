@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify, render_template
-from data import get_Rentals, get_submit_form, get_cars, get_available_cars
+from data import get_Rentals, get_submit_form, get_cars, get_available_cars, init_cars
 from datetime import datetime
+
+init_cars()
 
 app = Flask(__name__)
 
