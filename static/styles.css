@@ -70,10 +70,16 @@ button:hover {
 
 #carImage {
     display: block;
-    margin-top: 30px;
+    margin: 30px auto; /* Zentriert das Bild horizontal */
     width: 100%; /* oder eine feste Größe wie width: 300px; */
     max-width: 400px; /* Maximale Breite, um sicherzustellen, dass die Bilder nicht zu groß werden */
     height: auto;
+    border-radius: 8px;
+}
+
+iframe {
+    display: block;
+    margin: 30px auto; /* Zentriert das iFrame horizontal */
     border-radius: 8px;
 }
 
