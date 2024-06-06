@@ -20,18 +20,19 @@
             <label for="email">E-Mail:</label>
             <input type="email" class="form-control" id="email" name="email" required>
             <br>
-            <label for="date">Wunschtermin:</label>
-            <input type="date" class="form-control" id="date" name="date" required>
+            <label for="start_date">Startdatum:</label>
+            <input type="date" class="form-control" id="start_date" name="start_date" required onchange="updateAvailableCars()">
+            <br>
+            <label for="end_date">Enddatum:</label>
+            <input type="date" class="form-control" id="end_date" name="end_date" required onchange="updateAvailableCars()">
             <br>
             <label for="car_name">Fahrzeugmodell:</label>
             <select class="form-control" id="car_name" name="car_name">
                 <option value="-">-</option>
-                {% for car in cars %}
-                <option value="{{ car.autoname }}">{{ car.autoname }} - {{ car.price_per_day }} €/Tag</option>
-                {% endfor %}
             </select>
             <br>
             <button type="submit">Absenden</button>
+            <button type="button" onclick="sendCarName()">Klick mich</button>
         </form>
         <br>
         <section id="contact">
