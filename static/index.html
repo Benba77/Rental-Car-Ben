@@ -28,6 +28,11 @@
             <br>
             <label for="car_name">Fahrzeugmodell:</label>
             <select class="form-control" id="car_name" name="car_name" onchange="showCarImage()">
+                <option value="-">-</option>
+                <option value="Burgermobil">Golf 4</option>
+                <option value="Audi A4">Audi A4</option>
+                <option value="BMW 3">BMW 3</option>
+                <option value="Mercedes C">Mercedes C</option>
             </select>
             <br>
             <img id="carImage" src="" style="display:none; width: 100%; margin-top: 10px;" alt="Car Image">
@@ -39,14 +44,7 @@
             <h2>Kontakt</h2>
             <p>Email: info@lotfisautoverleih.de</p>
         </section>
-        <a href="{{ url_for('admin') }}"> Admin-Site </a> <br>
-
-        <h2> Unser Standort auf der Streetmap! </h2>
-        <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=10.51087686252092%2C52.24981701179856%2C10.53087686252092%2C52.26981701179856&amp;layer=mapnik&amp;marker=52.25981701179856%2C10.52087686252092"
-            style="border: 1px solid black"></iframe>
-        <br>
-        <small><a href="https://www.openstreetmap.org/?mlat=52.25981701179856&mlon=10.52087686252092#map=16/52.2598/10.5209">Größere Karte anzeigen</a></small>
+        <a href="{{ url_for('admin') }}"> Admin-Site </a>
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
@@ -61,10 +59,6 @@
             switch (model) {
                 case 'Burgermobil':
                     image.src = '{{ url_for("static", filename="car1.jpeg") }}';
-                    image.style.display = 'block';
-                    break;
-                case 'Golf 4':
-                    image.src = '{{ url_for("static", filename="golf4.jpeg") }}';
                     image.style.display = 'block';
                     break;
                 case 'Audi A4':

@@ -51,10 +51,9 @@ def init_cars():
     existing_cars = session.query(Car).count()
     if existing_cars == 0:
         cars = [
-            Car(autoname='Golf 4', available=True, wish_date=None, price_per_day=50),
-            Car(autoname='Golf 5', available=True, wish_date=None, price_per_day=60),
-            Car(autoname='BMW 3', available=True, wish_date=None, price_per_day=80),
+            Car(autoname='Burgermobil', available=True, wish_date=None, price_per_day=500),
             Car(autoname='Audi A4', available=True, wish_date=None, price_per_day=70),
+            Car(autoname='BMW 3', available=True, wish_date=None, price_per_day=80),
             Car(autoname='Mercedes C', available=True, wish_date=None, price_per_day=90),
         ]
         session.add_all(cars)

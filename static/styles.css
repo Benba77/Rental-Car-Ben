@@ -1,44 +1,105 @@
+/* Allgemeine Einstellungen */
 body {
-    font-family: Arial, sans-serif; /* Setzt die Schriftart für die gesamte Seite */
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Weißer Hintergrund */
     margin: 0;
     padding: 0;
-    background-color: #86ced8; /* Leichter Hintergrund für die gesamte Seite */
-    color: #333; /* Grundfarbe für Text */
+    color: #333;
 }
 
 header {
-    background-color: #000000; /* Dunkelblauer Hintergrund für den Kopfbereich */
-    color: white; /* Weißer Text im Kopfbereich */
-    padding: 10px 20px; /* Innenabstand */
+    background-color: #4CAF50; /* Grüne Kopfzeile */
+    color: white;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    margin: 0; /* Entfernt den Standardabstand um die Überschrift */
-}
-
-
-nav ul li a {   
-    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    margin: 0;
+    font-size: 2.5em;
 }
 
 main {
-    padding: 20px; /* Innenabstand für den Hauptinhalt */
+    padding: 1em;
+    max-width: 800px;
+    margin: auto;
 }
 
-section {
-    margin-bottom: 20px; /* Abstand unten für jede Sektion */
-    background-color: white; /* Weißer Hintergrund für Abschnitte */
-    padding: 20px; /* Innenabstand für Abschnitte */
-    border-radius: 8px; /* Abgerundete Ecken */
+h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+}
+
+form {
+    background: #f9f9f9;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#carImage {
+    display: block;
+    margin-top: 30px;
+    width: 100%; /* oder eine feste Größe wie width: 300px; */
+    max-width: 400px; /* Maximale Breite, um sicherzustellen, dass die Bilder nicht zu groß werden */
+    height: auto;
+    border-radius: 8px;
+}
+
+#contact {
+    background: #f1f1f1;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #333; /* Dunkelgrauer Hintergrund für den Fußbereich */
-    color: white; /* Weißer Text im Fußbereich */
-    text-align: center; /* Zentriert den Text im Fußbereich */
-    padding: 10px 20px; /* Innenabstand */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
     position: fixed;
     bottom: 0;
-    width: 100%; /* Breite des Fußbereichs */
+    width: 100%;
 }
 
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #45a049;
+}
