@@ -109,3 +109,40 @@ a {
 a:hover {
     color: #45a049;
 }
+
+/* Tabelle für Auto-Informationen */
+#carInfo table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#carInfo table thead tr {
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: left;
+}
+
+#carInfo table th, #carInfo table td {
+    padding: 12px 15px;
+}
+
+#carInfo table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#carInfo table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#carInfo table tbody tr:last-of-type {
+    border-bottom: 2px solid #4CAF50;
+}
+
+#carInfo table tbody tr:hover {
+    background-color: #f1f1f1;
+}
