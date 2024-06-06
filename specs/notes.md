@@ -54,3 +54,13 @@ class Rental(Base):
 Erklärung: 
 name = Column(String(80), nullable=False)
 name: Eine String-Spalte mit einer maximalen Länge von 80 Zeichen. nullable=False bedeutet, dass dieser Wert nicht null sein darf, d.h., es muss immer ein Wert vorhanden sein.
+
+3)
+Schritt 1: Erweiterung der Car-Tabelle um Standortinformationen
+Füge die Felder latitude und longitude zur Car-Tabelle hinzu:
+
+4)
+Schritt 2: Anpassung der HTML- und JavaScript-Dateien
+In der index.html-Datei fügst du ein div-Element für die Karte hinzu und passt das Dropdown-Menü an:
+
+In der script.js-Datei fügst du die Logik für die Kartendarstellung hinzu:
