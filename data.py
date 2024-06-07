@@ -75,7 +75,7 @@ def get_submit_form(data):
         )
         session.add(new_rental)  # Fügt den neuen Mietdatensatz zur Session hinzu
         session.commit()  # Speichert die Änderungen in der Datenbank
-    return {'message': 'Ihre Buchung erfolgreich!'}  # Gibt eine Erfolgsnachricht zurück
+    return {'message': 'Ihre Buchung war erfolgreich! 🚙'}  # Gibt eine Erfolgsnachricht zurück
 
 def get_cars():
     with get_session() as session:  # Erstellt eine neue Session und schließt sie automatisch nach der Verwendung
