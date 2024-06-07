@@ -15,55 +15,9 @@ einer Datenbank hinterlegt werden.( z.B.)
 Tipps:
 * https://bitbucket.org/qualidy/python_f73/src/main/Python02/KW23_Jun03-07_Projektwoche_Autobuchung/README.md
 
-# To-Do Liste
-* Donnerstag: Ziel fertig werden & verstehen
-* Freitag: Schöner machen, Notes bearbeiten & Azure Deployen mit David`s Hilfe
+# Erklärung
 
-1) 2xDatenbank bauen: 
-    * 1 für Namen, Email, Wunschtermin, Fahrzeugmodell(ForeignKey)
-    * 1 für Autonamen, frei/besetzt, Wunschtermin(ForeignKey?) (optional: Preis)
-        (* Test-Aufruf von AutoModell Datenbank -> Anzeigen auf HTML Seite mithilfe von Flask render)
-
-2) Drop Down Menü Automodelle: Verbunden mit Datenbank 
-    2.1) Nur freiwählbare Autos werden angezeigt, je nachdem welcher Tag gewählt
-
-3) Bei Buchung im Kalender freies Datum/gebuchte Termine anzeigen 
-
-4) Nicht gleiches Datum auswählen können bei gleichem Automodell
-
-5) Fertig!
-
-Unbedingt Verstehen!:
-1) Drop down Menü:
- <select class="form-control" id="car_name" name="car_name">
-                <option value="-">-</option>
-                {% for car in cars %}
-                <option value="{{ car.autoname }}">{{ car.autoname }} - {{ car.price_per_day }} €/Tag</option>
-                {% endfor %}
-            </select>
-
-2) data.py
-class Rental(Base):
-    __tablename__ = 'rentals'
-    id = Column(Integer, primary_key=True)
-    name = Column(String(80), nullable=False)
-    email = Column(String(120), nullable=False)
-    date = Column(Date, nullable=False)
-    car_name = Column(String(80), nullable=False)
-
-Erklärung: 
-name = Column(String(80), nullable=False)
-name: Eine String-Spalte mit einer maximalen Länge von 80 Zeichen. nullable=False bedeutet, dass dieser Wert nicht null sein darf, d.h., es muss immer ein Wert vorhanden sein.
-
-3)
-Schritt 1: Erweiterung der Car-Tabelle um Standortinformationen
-Füge die Felder latitude und longitude zur Car-Tabelle hinzu:
-
-4)
-Schritt 2: Anpassung der HTML- und JavaScript-Dateien
-In der index.html-Datei fügst du ein div-Element für die Karte hinzu und passt das Dropdown-Menü an:
-
-In der script.js-Datei fügst du die Logik für die Kartendarstellung hinzu:
+1) Logik für die Kartendarstellung:
 
 Standorte:
 <h2> Unser Standort auf der Streetmap! </h2>
@@ -73,11 +27,21 @@ Standorte:
         <br>
         <small><a href="https://www.openstreetmap.org/?mlat=52.25981701179856&mlon=10.52087686252092#map=16/52.2598/10.5209">Größere Karte anzeigen</a></small>
 
-Explanation:
-marker parameter: This part of the iframe URL marker=52.25981701179856%2C10.52087686252092 sets the marker's position. The coordinates 52.25981701179856 (latitude) and 10.52087686252092 (longitude) place the marker at the specific location.
-The marker is set to the new coordinates 52.2600, 10.5300
-The %2C in the URL represents a comma (,).
-
-Bounding Box (bbox): The bbox parameter defines the map's view boundaries. It should be set to a suitable range to ensure the location is centered and visible. In this case, it's slightly adjusted around the marker coordinates.
+* Marker-Parameter: Die Koordinaten 52.25981701179856 (Breitengrad) und 10.52087686252092 (Längengrad) platzieren den Marker an einer spezifischen Stelle (Braunschweig). 
+* %2C: Repräsentiert ein Komma in der URL.
+* Bounding Box (bbox): Definiert die Sichtgrenzen der Karte, um den Standort sichtbar zu machen.
 
 
+2) Logik Formular Daten:
+
+
+3) Logik Verfügbare Autos:
+
+def get_available_cars(start_date, end_date):
+    with get_session() as session:
+        rented_cars = session.query(Rental.car_name).filter(
+            (Rental.start_date <= end_date) & (Rental.end_date >= start_date)
+        ).all()
+        rented_car_names = [car_name for (car_name,) in rented_cars]
+        available_cars = session.query(Car).filter(~Car.autoname.in_(rented_car_names)).all()
+    return available_cars
