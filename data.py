@@ -15,11 +15,6 @@ class Rental(Base):
     end_date = Column(Date, nullable=False)
     car_name = Column(String(80), nullable=False)
 
-    def __str__(self):
-        return f'Name: {self.name}, Email: {self.email}, Zeitraum: {self.start_date} bis {self.end_date}, Automodell: {self.car_name}'
-
-    def __repr__(self):
-        return str(self)
 
 # Definition der Car-Tabelle
 class Car(Base):
@@ -30,11 +25,7 @@ class Car(Base):
     wish_date = Column(Date, nullable=True)
     price_per_day = Column(Integer, nullable=False)
 
-    def __str__(self):
-        return f'Autoname: {self.autoname}, Frei: {"Ja" if self.available else "Nein"}, Wunschtermin: {self.wish_date}, Preis: {self.price_per_day}'
 
-    def __repr__(self):
-        return str(self)
 
 # Initialisierung der Datenbank
 engine = create_engine('sqlite:///mycars.db')
@@ -87,7 +78,7 @@ def get_submit_form(data):
         )
         session.add(new_rental)
         session.commit()
-    return {'message': 'Form submitted successfully!'}
+    return {'message': 'Ihre Buchung erfolgreich!'}
 
 def get_cars():
     with get_session() as session:
