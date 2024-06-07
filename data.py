@@ -98,4 +98,6 @@ if __name__ == '__main__':
 
 	# •	Die Klassen Rental und Car definieren die Tabellenstruktur für Miet- und Autodaten in der Datenbank.
 	# •	Die Funktion init_cars fügt einige Autos zur Datenbank hinzu, wenn noch keine vorhanden sind.
-	# •	Die Funktionen get_Rentals, get_submit_form, get_cars und get_available_cars ermöglichen das Abrufen und Hinzufügen von Daten zur Datenbank sowie das Überprüfen der Verfügbarkeit von Autos.
+	# •	Die Funktionen get_Rentals, get_submit_form, get_cars und get_available_cars ermöglichen das Abrufen und Hinzufügen von Daten zur Datenbank sowie das Überprüfen der Verfügbarkeit von Autos
+
+    
