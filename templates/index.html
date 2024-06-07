@@ -9,7 +9,6 @@
 <body>
     <header>
         <h1>Ben Aissa's Autoverleih</h1>
-        <p>Jedes Auto wird pauschal für einen Tag verliehen</p>
     </header>
     <main>
         <h2>Formular</h2>
@@ -26,7 +25,7 @@
             <label for="end_date">Enddatum:</label>
             <input type="date" class="form-control" id="end_date" name="end_date" required onchange="updateAvailableCars()">
             <br>
-            <label for="car_name">Fahrzeugmodell:</label>
+            <label for="car_name">Verfügbare Fahrzeugmodelle:</label>
             <select class="form-control" id="car_name" name="car_name" onchange="showCarImage()">
             </select>
             <br>
@@ -48,8 +47,8 @@
                 <tbody>
                     <tr>
                         <td>Burgermobil</td>
-                        <td>50€</td>
-                        <td>150</td>
+                        <td>500€</td>
+                        <td>500</td>
                     </tr>
                     <tr>
                         <td>Golf 4</td>
@@ -76,9 +75,11 @@
         </section>
         <section id="contact">
             <h2>Kontakt</h2>
-            <p>Email: info@lotfisautoverleih.de</p>
+            <p>Ben Aissa Autoverleih GmbH</p>
+            <p>Wallstraße 7, 38100 Braunschweig</p>
+            <a>info@benaissa-autoverleih.de</a>
         </section>
-        <a href="{{ url_for('admin') }}"> Admin-Site </a> <br>
+
 
         <h2> Unser Standort auf der Streetmap! </h2>
         <iframe width="600" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
@@ -86,6 +87,10 @@
             style="border: 1px solid black"></iframe>
         <br>
         <small><a href="https://www.openstreetmap.org/?mlat=52.25981701179856&mlon=10.52087686252092#map=16/52.2598/10.5209">Größere Karte anzeigen</a></small>
+
+        <br>
+        <br>
+        <a href="{{ url_for('admin') }}"> Admin-Site </a> <br>
     </main>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

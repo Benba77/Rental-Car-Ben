@@ -65,7 +65,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2776ed;
 }
 
 #carImage {
@@ -107,7 +107,7 @@ a {
 }
 
 a:hover {
-    color: #45a049;
+    color: #2776ed;
 }
 
 /* Tabelle für Auto-Informationen */
